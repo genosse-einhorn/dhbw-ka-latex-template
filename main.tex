@@ -1,11 +1,13 @@
-\documentclass[12pt,a4paper,oneside,titlepage,liststotoc,bibtotoc]{scrreprt}
+\documentclass[12pt,a4paper,oneside,titlepage,listof=totoc,bibliography=totoc]{scrreprt}
 \usepackage[utf8]{inputenc}
 \usepackage[top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm,includehead,includefoot,headsep=1cm]{geometry}
 \usepackage[ngerman]{babel}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{setspace}
-\usepackage{fancyhdr}
+\usepackage[headsepline]{scrlayer-scrpage}
 \usepackage{acronym}
 \usepackage{listings}
 \usepackage{float}
@@ -40,13 +42,14 @@
 \newcommand{\logofirma}{\includegraphics[width=6cm]{img/logos/dhbw}}
 
 % Definition der Kopf- und Fußzeilen
-\fancyhf{}
-\fancyhead[L]{\sffamily \autor}
-\fancyhead[R]{\sffamily \nouppercase{\leftmark}}
-\fancyfoot[C]{\sffamily \thepage}
-%\renewcommand{\chapterpagestyle}{scrheadings}
+\ihead{\sffamily \autor}
+\chead{}
+\ohead{\sffamily \headmark}
+\automark{section}
+\cfoot{\sffamily \pagemark}
+\ifoot{}
+\ofoot{}
 
-\pagestyle{fancy}
 \onehalfspacing
 
 %code style for listings
