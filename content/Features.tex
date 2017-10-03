@@ -1,0 +1,26 @@
+\chapter{Features}
+
+\section{Kompatibilität}
+
+Die Vorlage funktioniert mit pdf\LaTeX, \XeLaTeX und \LuaLaTeX. Das mitgelieferte \texttt{Makefile}
+ruft \XeLaTeX auf.
+
+Außerdem ist die Vorlage bereits eingerichtet, um die Verwendung von deutschen Sonderzeichen und
+einigen Unicode-Symbolen (z.B. π) zu ermöglichen.
+
+\section{Latexrun}
+
+Diese Vorlage benützt \texttt{latexrun} TODO CITE. Latexrun ruft \LaTeX genau so oft auf wie nötig,
+um alle Änderungen der Eingabedateien in die Ausgabedatei zu übernehmen. Außerdem versucht latexrun,
+Fehlermeldungen und Warnungen der richtigen Quelltextdatei und Quelltextzeile zuzuordnen.
+
+Das Programm \texttt{latexrun} ist mitgeliefert. Das \texttt{Makefile} ruft \texttt{latexrun}
+für alle \texttt{.tex}-Dateien im obersten Verzeichnis auf.
+
+\section{Dot-Grafiken}
+Das Makefile besitzt einige weitere Regeln, zum Beispiel die Verarbeitung von \texttt{dot}-Grafiken.
+
+TODO EXAMPLE DOTFILE
+
+Auch integriert ist eine Regel, die SVG-Dateien in von pdf\LaTeX verwendbare PDF-Dokumente konvertiert
+(benötigt Inkscape).
