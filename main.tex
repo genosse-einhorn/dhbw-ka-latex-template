@@ -1,10 +1,19 @@
 \documentclass[12pt,a4paper,oneside,titlepage,listof=totoc,bibliography=totoc]{scrreprt}
 \usepackage{scrhack}
-\usepackage[utf8]{inputenc}
 \usepackage[top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm,includehead,includefoot,headsep=1cm]{geometry}
 \usepackage[ngerman]{babel}
+\usepackage{iftex}
+\ifPDFTeX
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+\fi
 \usepackage{lmodern}
-\usepackage[T1]{fontenc}
+\ifLuaTeX
+    \usepackage{fontspec}
+\fi
+\ifXeTeX
+    \usepackage{fontspec}
+\fi
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{setspace}

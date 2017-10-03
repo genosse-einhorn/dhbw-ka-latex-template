@@ -4,7 +4,7 @@ all: $(texfiles:.tex=.pdf)
 
 .PHONY: FORCE
 %.pdf: %.tex FORCE
-	./latexrun $<
+	./latexrun --latex-cmd=xelatex $<
 
 .PHONY: clean
 clean:
