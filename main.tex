@@ -32,6 +32,8 @@
 \usepackage{microtype}
 \usepackage[toc, nogroupskip, nonumberlist, nopostdot]{glossaries}
 \usepackage{array}
+\usepackage{caption}
+\usepackage{cite}
 
 % Für Beispieltext
 \usepackage{lipsum}
@@ -53,7 +55,7 @@
 \newcommand{\betreuerfirma}{BETREUER-FIRMA}
 \newcommand{\jahr}{2017}
 \newcommand{\code}[1]{\texttt{#1}}
-\newcommand{\source}[1]{\footnotesize Quelle: \url{#1}}
+\newcommand{\source}[1]{\caption*{Quelle: {#1}} }
 \newcommand{\zitat}[1]{"`#1"'}
 
 % Logos
@@ -98,6 +100,7 @@
 \setlist[2]{noitemsep}
 
 \begin{document}
+\pagenumbering{roman}
 
 \include{content/general/titelseite}
 \include{content/general/erklaerung}
@@ -105,13 +108,18 @@
 \tableofcontents
 \clearpage
 
-% include chapters here!
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% Inhalte hier einfügen!
 \include{content/Einleitung}
 \include{content/Features}
+\include{content/Blindtext}
 
 \begin{appendix}
 
-\bibliographystyle{unsrt}
+\bibliographystyle{apalike}
 \raggedright
 \bibliography{references/bibliothek}
 
