@@ -1,0 +1,79 @@
+\usepackage{iftex}
+\ifPDFTeX
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage{lmodern}
+    \usepackage[ngerman]{babel}
+\fi
+\ifLuaTeX
+    \usepackage{fontspec}
+    \setmainfont{CMU Serif}
+    \usepackage{polyglossia}
+    \setdefaultlanguage[spelling=new,babelshorthands=true]{german}
+\fi
+\ifXeTeX
+    \usepackage{fontspec}
+    \setmainfont{CMU Serif}
+    \usepackage{polyglossia}
+    \setdefaultlanguage[spelling=new,babelshorthands=true]{german}
+\fi
+\usepackage{microtype}
+\usepackage{beamerthemedefault}
+
+% footer stuff
+\definecolor{mycolor}{HTML}{e2001a}
+\setbeamercolor{title in head/foot}{bg=mycolor, fg=white}
+\setbeamercolor{structure}{fg=mycolor}
+
+% slightly modified from beamerouterthememiniframes.sty
+\setbeamertemplate{footline}{%
+    \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,%
+      leftskip=.3cm,rightskip=.3cm plus1fil]{title in head/foot}%
+      {\usebeamerfont{title in head/foot}\insertsectionhead
+      \hfill
+      \insertframenumber/\inserttotalframenumber
+      }%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[colsep=1.5pt]{lower separation line foot}
+    \end{beamercolorbox}
+}
+
+\logo{
+    \includegraphics[height=10mm]{img/logos/dhbw}
+    \vspace{200pt}
+}
+\title{Präsentationsvorlage Kolloquium}
+\subtitle{Untertitel}
+\author{Kümmerlin, Jonas}
+\date{Ein Datum}
+\subject{Projektarbeit}
+
+\begin{document}
+
+% actual content
+\frame{\titlepage}
+\section{Inhalt}
+\begin{frame}
+    \frametitle{Inhalt}
+    \begin{enumerate}
+        \item Eins
+        \item Zwei
+        \item Oder drei?
+    \end{enumerate}
+\end{frame}
+\section{Ein Abschnitt}
+\begin{frame}
+    \frametitle{Stichpunkte}
+    \begin{itemize}
+        \item<+-> Das ist eine Präsentation
+        \item<+-> Verwendet wird die \texttt{beamer}-Klasse \cite{tantau2010latex}
+        \item<+-> PowerPoint ist oftmals auch eine gute Option
+    \end{itemize}
+\end{frame}
+\section{Quellen}
+\begin{frame}[allowframebreaks]
+    \frametitle{Quellenverzeichnis}
+    \bibliographystyle{apalike}
+    \bibliography{references/bibliothek}
+\end{frame}
+\end{document}
