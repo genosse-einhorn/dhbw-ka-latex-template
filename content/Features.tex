@@ -4,6 +4,15 @@
 
 Die Vorlage funktioniert mit pdf\LaTeX, \XeLaTeX und \LuaLaTeX. Das mitgelieferte \texttt{Makefile}
 ruft \XeLaTeX auf.
+\ifPDFTeX
+Diese Ausgabedatei wurde mit dem klassischen pdf\LaTeX-Programm erstellt.
+\fi
+\ifLuaTeX
+Diese Ausgabedatei wurde mit \LuaLaTeX erstellt.
+\fi
+\ifXeTeX
+Diese Ausgabedatei wurde mit \XeLaTeX erstellt.
+\fi
 
 Die Vorlage ist bereits eingerichtet, um die Verwendung von deutschen Sonderzeichen und
 einigen Unicode-Symbolen (z.B. π) zu ermöglichen. Das klappt gut mit \XeTeX und den
@@ -24,6 +33,9 @@ keine Zeilennummer finden, dann muss man den Fehler von Hand suchen.
 
 Das Programm \texttt{latexrun} ist mitgeliefert. Das \texttt{Makefile} ruft \texttt{latexrun}
 für alle \texttt{.tex}-Dateien im obersten Verzeichnis auf. Ausgabeformat ist immer PDF.
+
+Alternativ kann diese Vorlage auch mit \texttt{latexmk} benutzt werden. Eine passende \texttt{latexmkrc}
+ist mitgeliefert, aber eine Integration mit dem \texttt{Makefile} gibt es nicht.
 
 \section{Dot-Grafiken}
 
