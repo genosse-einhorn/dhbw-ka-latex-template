@@ -1,2 +1,15 @@
 /*.pdf
 latex.out
+
+*.toc
+*.snm
+*.out
+*.nav
+*.log
+*.fls
+*.fdb_latexmk
+*.blg
+*.bbl
+*.aux
+*.log
+*.lof
